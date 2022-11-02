@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# coding: utf-8
 # @Time   : 2022/11/1 19:12
 # @Author : 梁灿
 
 """selenium基类，存放selenium基类封装方法"""
 
-from selenium.webdriver.support import expected_conditions as EXC
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.action_chains import ActionChains
@@ -13,7 +14,7 @@ from selenium.webdriver.common.keys import Keys
 import sys,os
 sys.path.append((os.path.abspath(os.path.join(os.path.dirname(__file__), '../'))))
 from config.config import cm
-from tools.time import sleep
+from tools.times import sleep
 from tools import logger
 
 
@@ -45,7 +46,7 @@ class WebPage(object):
     def find_element(self, locator):
         """寻找单个元素"""
         return WebPage.element_locater(lambda *args: self.wait.until(
-            EXC.presence_of_element_located(args)), locator) # presence_of_element_located((By.ID,"acdid")) 显式等待
+            EC.presence_of_element_located(args)), locator) # presence_of_element_located((By.ID,"acdid")) 显式等待
 
     def get_attrib(self, locator, value):
         """获取元素属性"""
@@ -60,7 +61,7 @@ class WebPage(object):
     def find_elements(self, locator):
         """查找多个相同元素"""
         return WebPage.element_locater(lambda *args: self.wait.until(
-            EXC.presence_of_all_elements_located(args)), locator)
+            EC.presence_of_all_elements_located(args)), locator)
 
     def find_element_drag(self, locator):
         target = self.find_element(locator)

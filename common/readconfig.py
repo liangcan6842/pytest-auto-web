@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# coding: utf-8
 # @Time   : 2022/11/1 13:19
 # @Author : 梁灿
 
@@ -16,7 +17,7 @@ class ReadConfig(object):
     """配置文件"""
     def __init__(self):
        self.config = configparser.RawConfigParser()
-       self.config.read(cm.ini_file, encoding='utf-8')
+       self.config.read(cm.ini_file, encoding='gbk')
 
     def _get(self,section, option):
         """获取"""
@@ -35,8 +36,8 @@ class ReadConfig(object):
 
 ini = ReadConfig()
 
-if __name__ == '__main__':
-    print(ini.url)
+# if __name__ == '__main__':
+#     print(ini.url)
 
 
 

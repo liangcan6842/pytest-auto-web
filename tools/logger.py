@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# coding: utf-8
 # @Time   : 2022/11/1 14:11
 # @Author : 梁灿
 import ctypes

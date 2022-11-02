@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+# coding: utf-8
 # @Time   : 2022/11/1 18:47
 # @Author : 梁灿
 
@@ -36,11 +37,12 @@ def running_time(func):
         res = func(*args, **kwargs)
         print("检验元素完成！ 用时%.3f秒！" % (timestamp() - start))
         return res
+
     return wrapper()
 
 
-if __name__ == '__main__':
-    print(dt_strftime("%Y-%m-%d %H:%M:%S"))
+# if __name__ == '__main__':
+#     print(dt_strftime("%Y-%m-%d %H:%M:%S"))
 
 
 

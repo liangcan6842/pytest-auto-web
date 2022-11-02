@@ -1,0 +1,3 @@
+ÕËºÅ: 'xpath==//input[@placeholder="ÕËºÅ"]'
+ÃÜÂë: 'xpath==//input[@placeholder="ÃÜÂë"]'
+µÇÂ¼ºóÌ¨: 'xpath==//button[text()=" µÇÂ¼ºóÌ¨ "]'
