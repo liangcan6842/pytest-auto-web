@@ -16,8 +16,8 @@ from common.readconfig import ini
 from page_object.login import LoginPage
 
 
-@allure.story("测试主流程，顺利通过流程")
-class TestOverview:
+@allure.story("测试登录")
+class TestLogin:
 
     @allure.step('登录')
     @pytest.fixture(scope='function')

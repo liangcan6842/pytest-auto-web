@@ -80,3 +80,4 @@ def write(mess, foregound = FOREGROUND_WHITE, background = FOREGROUND_BLACK, end
 
 if __name__=='__main__':
     info("==============================")
+
